@@ -1,6 +1,6 @@
 /*-------------------------------------------------------------ExpEnv.c-------------------------------------------------------------*/
 /*
- * Created by Vishal Menon in association with Dobson (Audio Programming Book)
+ * Created by Vishal Menon in association with Richard Dobson (Audio Programming Book)
  * Implementation of exponential attack and decay curves
  * USAGE:
  * To write output to a file on the command line use the following syntax: 
