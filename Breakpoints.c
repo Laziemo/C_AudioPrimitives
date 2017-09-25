@@ -2,6 +2,7 @@
 /*
  * Created by Vishal Menon (Laziemo) in association with Richard Dobson (The Audio Programming Book)
  * Version 1.0: September 23, 2017
+ * Envelope Generator Origins
 */ 
 /*--------------------------------------------------------------------Breakpoints.c--------------------------------------------------------------------*/
 
