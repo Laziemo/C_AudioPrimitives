@@ -95,7 +95,7 @@ BREAKPOINT* get_breakpoints(FILE* fp, unsigned long* psize){
         if(points == NULL) return NULL;
         
     while(fgets(line,80,fp)){
-        //Scan for errors in file
+        //Scan for errors in fgets output to line array
         got = sscanf(line, "%lf%lf", &points[npoints].time, &points[npoints].value);
             if(got < 0) continue;
             if(got == 0) {
