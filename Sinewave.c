@@ -5,8 +5,17 @@
  * Sine Wave Generator Origins
  * Write a sine wave as text
  * 
+ *Input: 
+ * - Number of samples that represent the sound <duration*samplerate> (nsamps)
+ * - Sinewave frequency to generate (freq)
+ * - Sample Rate (srate)
  * 
- * 
+ *Output:
+ * - Sinewave Data
+ *
+ * USAGE: 
+ * The > symbol can be used after command line arguments followed by a filename.txt to copy the contents of stdout to a .txt file 
+ *
 */ 
 /*--------------------------------------------------------------------Sinewave.c--------------------------------------------------------------------*/
 
