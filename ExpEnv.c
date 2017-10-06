@@ -6,8 +6,8 @@
  *Input:
  *	- Duration (duration)
  *	- Number of Points/Ticks (npoints)
- *  - Start time value (startvalue)
- *  - End time value (endvalue)
+ * - Start time value (startvalue)
+ * - End time value (endvalue)
  *Output: 
  *	- Exponentially decreasing or increasing values from startvalue to endvalue
  USAGE:
