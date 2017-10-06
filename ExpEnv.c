@@ -2,11 +2,18 @@
 /*
  * Created by Vishal Menon in association with Richard Dobson (Audio Programming Book)
  * Implementation of exponential attack and decay curves
- * USAGE:
- * To write output to a file on the command line use the following syntax: 
- * expenv duration npoints startvalue endvalue > filename.txt
- * The > is used to write all stdout to a file - which is why fprintf is used to specify errors to stderr
- */
+ *
+ *Input:
+ *	- Duration (duration)
+ *	- Number of Points/Ticks (npoints)
+ *  - Start time value (startvalue)
+ *  - End time value (endvalue)
+ *Output: 
+ *	- Exponentially decreasing or increasing values from startvalue to endvalue
+ USAGE:
+ * Multiply output to an audio buffer to apply expoential envelope shaping
+*/
+
 /*-------------------------------------------------------------ExpEnv.c-------------------------------------------------------------*/
 #include <stdio.h>
 #include <stdlib.h>
