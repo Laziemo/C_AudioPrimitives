@@ -3,6 +3,20 @@
  * Created by Vishal Menon (Laziemo) in association with Richard Dobson (The Audio Programming Book)
  * Version 1.0: October 06, 2017
  * Combining ExpDec.c and Sinewave.c to generate a sinewave file with exponential decay
+ *
+ *Input:
+ * - Output File (fp)
+ * - Duration (dur)
+ * - Sinewave Frequency (freq)
+ * - Sample Rate (srate)
+ * - Amplitude (amp)
+ *
+ *Output:
+ * - FILE containing sinwave data with exponential decay
+ * 
+ *UPGRADES: 
+ * Create and EXPPitchDec -> Getting close to a kick drum
+ *
 */ 
 /*--------------------------------------------------------------------SineDec.c--------------------------------------------------------------------*/
 
