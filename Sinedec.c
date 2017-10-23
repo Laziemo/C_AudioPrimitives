@@ -5,7 +5,7 @@
  * Combining ExpDec.c and Sinewave.c to generate a sinewave file with exponential decay
  *
  *Input:
- * - Output File (fp)
+ * - .txt file containing audio data (fp)
  * - Duration (dur)
  * - Sinewave Frequency (freq)
  * - Sample Rate (srate)
@@ -25,7 +25,7 @@
 #include <stdlib.h>
 #include <math.h>
 #ifndef M_PI
-#define M_PI (3.141592654)
+#define M_PI 3.141592654
 #endif
 
 enum {ARG_NAME,
@@ -47,7 +47,7 @@ int main(int argc, char** argv){
 	FILE *fp = NULL;
 	
 		if (argc != ARG_NARGS){
-			fprintf(stderr, "Bad Usage \n Correct Usage: sindec output.txt dur freq srate amp \n");
+			fprintf(stderr, "Bad Usage \n Correct Usage: sindec sound.txt dur freq srate amp \n");
 			return 1;
 		}
 	
@@ -64,21 +64,24 @@ int main(int argc, char** argv){
 	amp = atof(argv[ARG_AMP]);
 	
 	nsamps = (int) (dur * srate);
-	angleincr = (nsamps * twopi) / srate;
+	angleincr = (freq * twopi) / srate;
 	
 	start = 1.0;
 	end = 1.0e-4;
-	maxsamp = 0.0;
+	maxsamp = 1.0e-4 ;
 	
-	fac = pow(end/start,1.0/nsamps);
-		
+    //What will happen: start/end? Attack? Find out...
+	fac = pow(end/start,1.0/nsamps); 
+		//Sine Generator
 		for(i = 0 ; i<nsamps; i++){
 			samp = amp * sin(angleincr * i);
-			samp *= start;
-			start *= fac;
-			
+            //Exponential Decay
+			/*samp *= start;
+			start *= fac; 
+			*/
 			fprintf(fp, "%0.8lf \n", samp);
 			
+            //Report the maximum amplitude of the signal
 				if(fabs(samp) > maxsamp) {
 					maxsamp = fabs(samp);
 				}
@@ -86,7 +89,7 @@ int main(int argc, char** argv){
 		
 		fclose(fp);
 		
-		fprinf(stderr, "DONE! Maximum Sample Value = %0.8lf \n", maxsamp);
+		fprintf(stderr, "DONE! Maximum Sample Value = %0.8lf \n", maxsamp);
 		
 return 0;
 }
