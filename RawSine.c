@@ -44,7 +44,7 @@ const char* endianess[2] = { "big_endian", "little_endian" };
 
 int main(int argc, char** argv) {
 	
-	unsigned long i, nsamps;
+    unsigned long i, nsamps;
     unsigned int maxframe = 0;
     unsigned int samptype, endian, bitreverse;
     double samp, dur, freq, srate, amp, step;
