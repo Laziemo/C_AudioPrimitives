@@ -38,7 +38,7 @@ int main(int argc, char* argv[] ){
     
     printf("Breakpoints Program: Envelope Shaping Origins\n");
     
-        if (argc < 2){
+        if (argc != 2){
         printf("Insufficient command line arguments! Breakpoints takes 2 arguments. \n Usage: Breakpoints inputfile.txt \n");
         return 0;
         }
