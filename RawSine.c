@@ -7,8 +7,8 @@
 * 
 *
 *Input:
-*	- File Name
-*	- Sample Duration
+*   - File Name
+*   - Sample Duration
 *   - Frequency
 *   - Sample Rate
 *   - Amplitude
